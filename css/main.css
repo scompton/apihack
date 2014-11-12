@@ -1,0 +1,190 @@
+/*float styles*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#mainHeader {
+  background-color: black;
+  height: 80px;
+  color: #ecf0f1;
+  padding: 20px;
+}
+
+#title {
+  float: left;
+  font-size: 56px;
+  padding-top: 8px;
+}
+
+nav {
+  float: right;
+  padding-top: 20px;
+}
+
+nav ul {
+  height: 40px;
+}
+nav ul li{
+  height: 100%;
+  display: inline-block;
+}
+
+.navItem {
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  margin-left: 4px;
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+}
+
+#search {
+  font-weight: bold;
+  background-color: #d35400;
+  width: 100px;
+}
+
+#map-canvas {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.results {
+  display: none;
+  position: absolute;
+  width: 620px;
+  z-index: 20;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#resultsHeader {
+  top: 0;
+  height: 120px;
+  background-color: black;
+}
+#resultsBody {
+  top: 0px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body.pmr-open #wrapper {
+  left: -620px;
+}
+
+body.pmr-open .results {
+  display: block;
+  right: 0;
+}
+
+.dog {
+  width: 600px;
+  height: 200px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #ecf0f1;
+}
+
+.photo {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.info {
+  float: right;
+  width: 390px;
+  height: 200px;
+  margin: 0px 5px;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 24px;
+  color: #d35400;
+}
+
+dd {
+  display: block;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.label {
+  font-size: 18px;
+  color: #3498db;/*#2ecc71;/*#1abc9c;/*#f1c40f;*/
+}
+
+#desc {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 400px;
+  font-size: 16px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#descFull {
+  display: none;
+  height: 500px;
+  width: 500px;
+  background-color: white;
+}

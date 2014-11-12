@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dog Finder</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7inW471vVvUL883yr0BITjG53T7b1Gl8">
+    </script>
+	  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="app.js"></script>
+    <script src="classie.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="mainHeader">
+        <div id="title">Dog Finder</div>
+        <nav>
+          <ul>
+            <!--<li><input type="text" name="zip" placeholder="zip code" class="navItem" id="zip" required></li>-->
+            <li>
+              <select class="navItem" id="breeds">
+                <option>All Breeds</option>
+              </select>
+            </li>
+            <li>
+              <select class="navItem" id="sex">
+                <option>Male or Female</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </li>
+            <!--<li><button class="navItem" id="search" type="button">Search</button></li>-->
+            <li>
+              <form class="goSearch" onsubmit="return false;">
+                <input class="navItem" type="text" name="zip" placeholder="zip code" id="zip" required>
+                <input class="navItem" id="search" type="submit" value="Search">
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </header>
+ 
+      <div id="map-canvas"></div>
+    </div>
+
+    <!--<header class="results" id="resultsHeader"></header>-->
+    <div class="results clearfix" id="resultsBody"></div>
+
+	  <div class="templates hidden">
+      <div class="dog">
+        <div class="photo"></div>
+	  	  <dl class="info">
+	  	  	<dt id="name"></dt>
+	  	  	<dd id="sex">Sex</dd>
+	  	  	<dd id="age">Age</dd>
+	  	  	<dd id="breed">Breed</dd>
+	  	  	<dd id="desc">Info</dd>
+	  	  	<dd id="email">Email</dd>
+	  	  	<dd id="phone">Phone</dd>
+	  	  </dl>
+      </div>
+    </div>
+
+    <div id="descFull"></div>
+
+  </body>
+</html>
